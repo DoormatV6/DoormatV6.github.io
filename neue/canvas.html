@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <meta charset="UTF-8" />
+	
+	<style type="text/css">
+    
+    	* { font-family: Comic Neue Angular, Verdana, Arial, sans-serif; }
+		body { background-color: #fff; cursor: default; }
+		h1 { font-size: 15pt; }
+		p { font-size: 10pt; }
+    
+        a:link {color:#92C2FF;text-decoration:none;}
+        a:hover {color:#D2E3FF;text-decoration:none;}
+        a:active {color:#0076BB;text-decoration:none;}
+        a:visited {color:#B892FF;text-decoration:none;} 
+        
+        canvas, div.canvas {border:3px solid #333;border-radius:5px;}
+        canvas {background-color:white;}
+        div.canvas {padding:0px 5px;}
+	</style>
+</head>
+
+<body>
+<canvas width="320" height="240" id="dacanvie">
+	<div class=canvas title="Dang, that sucks."
+    style="width:320px;height:240px;
+    background-image:url(http://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Young_Fox_2_%287236338246%29.jpg/607px-Young_Fox_2_%287236338246%29.jpg);
+    background-size:330px;color:white;
+    text-shadow:1px 1px 1px #000;">
+        <p>Oh. Your browser doesn&apos;t do &lt;canvas&gt;. Well, that sucks. Have a picture of a real live fox.</p><div style="height:125px;"></div><p style="text-align:right;">In the meantime, download <a href="http://www.mozilla.org/en-US/firefox/new">Mozilla Firefox</a> or <a href="http://www.google.com/chrome">Google Chrome</a> so you can actually play this game.</p>
+    </div>
+    </canvas>
+    
+    <script>
+      var canvas = document.getElementById('dacanvie');
+      var context = canvas.getContext('2d');
+
+      context.font = 'italic bold 20pt Comic Neue Angular';
+      context.fillText('Wh-wh-what game? I don\'t', 0, 60);
+      context.fillText('see any game! WHAT ARE', 5, 90);
+      context.fillText('YOU TALKING ABOUT!?', 20, 120);
+	  
+	  context.font = '10pt Comic Neue Angular';
+	  context.fillText('also good for you your browser supports <canvas>.', 5, 200);
+    </script>
+</body>
+</html>

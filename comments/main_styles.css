@@ -1,0 +1,73 @@
+body {
+	font-family:Verdana,Sans-serif;
+	font-size:12px;
+}
+div#comments {
+	width:600px;
+	margin:0 auto;
+}
+div.commentbox {
+	border-radius:4px 4px 4px 15px;
+	padding:10px;
+	overflow:auto;
+	margin:5px 5px 0px 5px;
+}
+div.commentbox div.posterinfo {
+	font-size:.8em;
+	float:right;
+}
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	position:relative;
+	left:20px;
+}
+div#colours {
+	position:fixed;
+	top:5px;
+	right:5px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor:default;
+}
+
+div.colourselector {
+	border:1px solid white;
+	display:inline-block;
+	width:10px; height:10px;
+	cursor:pointer;
+	position:relative;
+}
+
+div.colourselector:hover {
+	top:-1px;
+}
+
+fieldset#commentfield {
+	margin-top:10px;
+	text-align:center;
+	border-radius:4px 15px 15px 15px;
+}
+
+textarea#commentarea {
+	width:550px;max-width:550px;min-width:500px;
+	height:100px;max-height:200px;min-height:100px;
+}
+textarea#commentarea, button#commentsubmit {
+	border:none;
+	border-radius:4px;
+}
+
+div#cs-white {border:1px solid black !important;background:#fff;}
+div#cs-black {background:#111;}
+div#cs-red	 {background:#ff4136;}
+div#cs-green {background:#2ecc40;}
+div#cs-blue  {background:#0074d9;}
+div#cs-orange{background:#ff851b;}
+div#cs-pink	 {background:#f012be;}

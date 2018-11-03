@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<toon>
+		<link>http://homestarrunner.com/sbemail2.html</link>
+		<pvim>http://www.hrwiki.org/w/images/thumb/f/fb/sbemail2.PNG/180px-sbemail2.PNG</pvim>
+		<name>homsar</name>
+		<type>Strong Bad Email #2</type>
+		<date>Wednesday, September 19, 2001</date>
+		<time>0:46</time>
+		<desc>A misspelling of "Homestar" leaves Strong Bad attempting to kill Homsar.</desc>
+	</toon>
+	<toon>
+		<link>http://homestarrunner.com/sbemail1.html</link>
+		<pvim>http://www.hrwiki.org/w/images/thumb/3/3f/sbemail1.PNG/180px-sbemail1.PNG</pvim>
+		<name>some kinda robot</name>
+		<type>Strong Bad Email #1</type>
+		<date>Wednesday, August 22, 2001</date>
+		<time>0:45</time>
+		<desc>Strong Bad answers an email from Abdi LaRue from San Diego, California, who asks if Strong Bad takes off his mask and boxing gloves before he goes to bed.</desc>
+	</toon>
+</data>

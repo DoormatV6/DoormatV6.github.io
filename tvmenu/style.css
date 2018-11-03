@@ -1,0 +1,35 @@
+    @import url(https://fonts.googleapis.com/css?family=Luckiest+Guy|Boogaloo);
+    
+		body{
+		background-color:#371C00;
+		color:white;
+        font-family:"Boogaloo","Trebuchet MS",sans-serif;
+		}
+		
+		div.tv{
+            border-radius: 50px / 100px;
+			border: 5px solid #190D00;
+            background-color:black;
+			background-image:url(statoc.svg);
+            color:white;
+            text-align:center;
+            width:800px;height:500px;
+			padding:20px;
+        }
+		div#cent{text-align:center;}
+		img#prev{float:left;border-radius:10px / 20px;}
+		
+        h1#name:before,h1#name:after{content:"\"";}
+        h1#name{
+            font-family:"Luckiest Guy","Trebuchet MS",sans-serif;
+            font-weight:bolder;
+            text-transform:uppercase;
+            font-size:2em;margin:5px;
+        }
+		h2#desc{
+			font-size:1.5em;margin:5px;
+        }
+		h2#desc:after{content:"(Time: "attr(data-run)", Year: "attr(data-year)")";font-style:italic;font-size:.75em;padding-left:10px;}
+
+		#copy
+		{text-align:center;}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<title>CFA: Crappiest Feed Around!</title>
+<link>https://dl.dropboxusercontent.com/u/245444729/test/neue/index.html</link>
+<description>Not the chicken feed kind.
+The RSS feed kind.</description>
+<!-- Holy-a crap-a the crappy feed items! -->
+
+<item>
+<title>CFA#1: Google</title>
+<link>http://www.google.com/</link>
+<guid>http://www.google.com/</guid>
+<pubDate>Mon, 5 May 2014 16:14:00 EST</pubDate>
+<description>Shut up and Google it!</description>
+</item>
+
+<item>
+<title>CFA#1: Homestar Runner</title>
+<link>http://homestarrunner.com</link>
+<guid>http://homestarrunner.com</guid>
+<pubDate>Mon, 5 May 2014 16:14:00 EST</pubDate>
+<description>eriously!! holy crpa</description>
+</item>
+
+<item>
+<title>CFA#3: Dag it I maserd up...</title>
+<link>http://www.wikihow.com/Create-an-RSS-Feed</link>
+<guid>http://www.wikihow.com/Create-an-RSS-Feed</guid>
+<pubDate>Mon, 5 May 2014 16:24:00 EST</pubDate>
+<description>daggit.</description>
+</item>
+
+</channel>
+</rss>

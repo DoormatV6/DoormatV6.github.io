@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BREEEEEEEEEEEEP!</title>
+<style>
+body {
+background-color:#F0F0F0;font-family:Verdana,sans-serif;margin:0px;
+    overflow-y: hidden;animation:boop2 .75s linear 1;
+}
+
+
+div.error {position: relative;opacity:1;
+min-width: 13em;
+max-width: 52em;
+margin: 4em auto;
+border: 1px solid #A0A0A0;
+border-radius: 10px;
+padding: 3em;
+			animation:boop2 .75s linear 1;
+			background:url("warny.png") no-repeat scroll left 0px content-box border-box #FFF;}
+			div#aaa {font-size:1.25em;font-weight:bold;}
+			div#marleft {margin-left:80px;}
+hr{
+    background-color: #ddd;
+    border: 0 none;
+    color: #ddd;
+    height: 1px;
+}
+			
+div.deleted {
+			width:100%;
+			height:60vh;
+			position:absolute;
+			top:0px;
+			z-index:-999;
+			background-color:red;
+			text-align:center;
+			padding-top:40vh;
+			opacity:0;
+			animation:boop .75s linear 1;
+			}
+			
+@keyframes boop
+{
+0% {opacity:1;z-index:999;}
+99% {opacity:1;z-index:999;}
+100% {opacity:0;z-index:-999;}
+}
+@keyframes boop2
+{
+0% {opacity:1;background-color:red;color:red;}
+99% {opacity:1;background-color:red;color:red;}
+100% {opacity:1;}
+}
+</style>
+<script type="text/javascript">
+function playSound(soundfile) {
+  document.getElementById("dummy").innerHTML= "<audio src=\""
+    +soundfile+"\" autoplay><div style=\"text-align:center;\">Yer browser ain't supportin' <i>&lt;audio&gt;</i>.<br>Go get one of these HTML5 compatible browsers:<br><a href=\"https://www.google.com/chrome/browser/\">Google Chrome</a><br><a href=\"http://www.mozilla.org/en-US/firefox/new/\">Mozilla Firefox</a><br><a href=\"http://windows.microsoft.com/en-us/internet-explorer/download-ie\">Internet Explorer 9+</a></div></audio>";
+}
+</script>
+</head>
+<body>
+
+<div class=deleted><img src="deleted.png" style="width:90%;" alt="NOT FOUND!!"></div>
+
+<div class=error>
+<div id=marleft>
+<div id=aaa>
+Not Found, Idiot!
+</div>
+<hr><br>
+The file you were looking for isn't exist. What you can try:<br><br>
+<hr>
+<ul><li><i>NOTHING!</i> YOU CAN DO <i>NOTHING!</i> YOU <i>LOSE!</i> GOOD <i>DAY</i>, SIR!</li></ul>
+<button onclick="playSound('https://dl.dropboxusercontent.com/u/245444729/plb.ogg');">Warning: Pointless button</button>
+</div>
+</div>
+<audio src="https://dl.dropboxusercontent.com/u/245444729/deleted.ogg" autoplay></audio>
+<span id="dummy"></span>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<style>
+body{margin:0}
+div.left{width:50%;height:100%;background:red;position:absolute;left:0;top:0;animation:lflash 1s infinite;-webkit-animation:lflash 1s infinite;}
+div.right{width:50%;height:100%;background:blue;position:absolute;right:0;top:0;animation:rflash 1s infinite;-webkit-animation:rflash 1s infinite;}
+
+@keyframes lflash{
+0%{background:red}
+49%{background:red}
+50%{background:blue}
+99%{background:blue}
+}
+@keyframes rflash{
+0%{background:blue}
+49%{background:blue}
+50%{background:red}
+99%{background:red}
+}
+@-webkit-keyframes lflash{
+0%{background:red}
+49%{background:red}
+50%{background:blue}
+99%{background:blue}
+}
+@-webkit-keyframes rflash{
+0%{background:blue}
+49%{background:blue}
+50%{background:red}
+99%{background:red}
+}
+</style>
+<div class="left"></div>
+<div class="right"></div>

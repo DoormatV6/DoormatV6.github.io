@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>DavBB changelog</title>
+	<style>
+	body {
+		font-family:sans-serif;
+		}
+	span.mono {
+		font-family:monospace;
+		}
+	</style>
+</head>
+<body>
+<h1>DavBB changelog</h1>
+
+<h3>v0.11.1 - 13 July 2014 - ?</h3>
+<ul>
+<li>In topics, smileys are no longer loaded from the database if they're disabled</li>
+<li>Logging out now uses a key, so someone can't log you out by posting an image that's actually the logout link anymore, without knowing this key</li>
+<li>There is now a page that shows the latest posts on the forum, and you can also view all posts by a certain user! \(^_^)/</li>
+<li>If someone has the permission to view IPs but not the permission to view the admin CP, they won't see a (useless) link to the IP check page in the admin CP when they view an IP anymore</li>
+<li>The amount of members is now displayed on the board index<!-- <span style="color:red; font-size: 36px;">[[[[[WIP!!!!!!!!!]]]]]</span> was WIP, now no longer, but this was the major indication so I surely wouldn't forget it --></li>
+<li>Some layout updates on the index and topics listing, the tables are now 90% of the page width and in the center</li>
+<li>Page buttons are now also on the top of other pages than thread views</li>
+<li>An RTL layout (right to left) is now supported for languages that have a writing system from right to left (like Arabic and Hebrew). Whether the language system accounts for these kinds of languages is another question...</li>
+<li>Announcements WIP</li>
+</ul>
+
+<h3>v0.11.0 - 5 June 2014 - 11 July 2014</h3>
+<ul>
+<li>Avatars can now be turned off in the admin CP</li>
+<li>Smileys can now be turned off in the admin CP</li>
+<li>The YouTube connector will now check if curl is available before calling it, now on the post page and the rules page as well.</li>
+<li>https:// now doesn't break the [youtube] tag</li>
+<li>These tags can now be turned off in the admin CP: [color], [size], [font], [img], [url], [move] and [moveright], [abbr], [highlight], [censor], [youtube] and [.]</li>
+<li>Links in posts now open with <span class="mono">target="_blank"</span> instead of <span class="mono">target="blank"</span></li>
+<li>Quick reply box implemented</li>
+<li>Account management in the admin CP works a bit differently now. [[WIP]]</li>
+<li>You can now set a minimum and maximum amount of characters for post content, thread titles and usernames.</li>
+<li>Some settings in the admin CP are now reordered and all settings have now been put in categories.</li>
+<li>&quot;HTML title&quot; has been renamed &quot;Page title&quot;, and the &quot;Message&quot; option has been renamed &quot;News message&quot;.</li>
+<li>There used to be one <span class="mono">htmlspecialchars()</span> too many when displaying the moderator note for a post report in the text box, this has now been fixed.</li>
+<li>The layout of the admin panel changed slightly - the settings screen is no longer the admin index page. Now there's an index page which will add some quick links and statistics or something. [[WIP]]</li>
+<li>A lot of uses of undefined variables are now ironed out, so if <span class="mono">E_STRICT</span> is enabled, you won't get as much pages full of errors now. More will follow in a later version.</li>
+<li>Some other minor changes and fixes, like the clock glitch when editing a board or a board mode.</li>
+<li>Boards can now be set so threads appear in the order they were created, instead of in the order they were last posted in.</li>
+<li>MySQLi is supported now!</li>
+<li>Fill-in for usernames on the pages for banning are now <span class="mono">htmlspecialchars</span>'d</li>
+<li>Several query optimizations</li>
+<li>Bug fixed where perma-IP bans would show as expiring in more than 33k days instead of saying it's permanent</li>
+<li>Bug fixed where users with permission to delete moderation reports couldn't delete reports</li>
+<li>Some values are now cached, namely the amount of moderator reports that are open, the amount of referrer blocks, and when the last IP ban expires. This is to improve performance, so less queries have to be made in case there are no referral blocks and no IP bans.</li>
+<li>Default style option in admin CP fixed</li>
+</ul>
+
+<h3>v0.10.1 - 30 May 2014</h3>
+<ul>
+<li>I honestly don't know how I managed to miss a bug where an attempt was made to load an IP ban reason when someone's account is banned. In other words, it always showed no reason was specified. This has now been fixed.</li>
+<li>Input fields in the account CP are now more specific; the avatar field is now type=&quot;url&quot; and the time zone offset field is now type=&quot;number&quot;.</li>
+</ul>
+
+<h3>v0.10.0A - 24 May 2014</h3>
+<ul>
+<li>Fixed board images not getting saved</li>
+<li>Removed giant cursor which somehow managed to hide in the Classic theme</li>
+</ul>
+
+<h3>v0.10.0 - 10 Apr 2014 - 18 May 2014 (with a hiatus in between)</h3>
+<ul>
+<li>For compatibility with hosts that have disabled ini_set(), I've disabled the command that attempts to disable register_globals on line 6 in start.php.</li>
+<li><span class="mono">!defined('MHASH_SHA256')</span> appeared to not be a reliable method of determining whether SHA256 is supported or not. It gave a false positive for me so I'm just removing the check for now</li>
+<li>Added a page to the admin CP where you can see which files are readable and which aren't</li>
+<li>It will now warn in advance for a non-writable settings file</li>
+<li>The YouTube connector will now check if curl is available before calling it</li>
+<li>Messages <del>will be</del> are WIP. Not done yet.</li>
+<li>More specific database error message if an id in the database maxed out</li>
+<li>Why did they confuse 'referer' and 'referrer' back when HTTP was invented? Now I'm confused as well.</li>
+<li>The ability to block users based on the refer(r)er</li>
+<li>A custom database class is in progress</li>
+</ul>
+
+<h3>v0.9.2A - 9 Apr 2014</h3>
+<ul>
+<li>Sorting the memberlist by posts is now somewhat better (it used to be a bit random with the offset stuff, now it just orders by the actual post count)</li>
+</ul>
+
+<h3>v0.9.2 - 6 Apr 2014 - 7 Apr 2014</h3>
+<ul>
+<li>Hopefully prevented browsers from filling in a username and password when adding/modifying an account in the admin CP</li>
+<li>The quick moderation dropdown now only lists Delete if you can delete any post on the page (and it's currently the only thing you can do with quick moderation)</li>
+<li>Support for a configuration file to replace certain images with a different image, or to replace the entire &lt;img&gt; tag by something else based on which image it is. This makes using Font Awesome possible!</li>
+<li>Styles can now also insert HTML in the &lt;head&gt; tags</li>
+<li>Most hardcoded text on the login and register page moved to languages (should have done this much earlier, and things like SQL errors are untranslated...)</li>
+<li>There are now two default themes, of which one uses Font Awesome now, which has a few advantages but also a few disadvantages.</li>
+<li>Much more permissions for the mod CP are now implemented. Permissions for the admin CP will be added later</li>
+<li>If you enter an incorrect username or password, you will be back on the login page with a message on the login page itself, instead of getting an error box on a blank page</li>
+</ul>
+
+<h3>v0.9.1A - 5 Apr 2014</h3>
+<ul>
+<li>Wrong header when there was an error saving a censored word fixed</li>
+</ul>
+
+<h3>v0.9.1 - 5 Apr 2014</h3>
+<ul>
+<li>Some help text added for the permissions to unlock topics, and move topics. Because they might raise some questions.</li>
+<li>Fixed an exceptionally flagrant error</li>
+<li>Automatic post merging in case of double posts added</li>
+</ul>
+
+<h3>v0.9 - 12 Mar 2014 - 4 Apr 2014</h3>
+<ul>
+<li>Whew, custom permissions added! More specific permissions (in particular the different admin CP and mod CP areas) will be added in a later version.</li>
+<li>&quot;Hidden&quot; account status removed.</li>
+<li>The message saying the forum is in maintenance mode now uses a different layout (and it is the first error message to use the criticalmessage() function, which I will also use for database errors and other errors where DavBB cannot continue. It looks like the banned message but then in orange instead of red)</li>
+<li>A few settings that weren't initialized properly when adding an account via the admin CP are now initialized.</li>
+<li>Even though it wouldn't make sense in most cases, you can now choose for a custom amount of minutes when banning</li>
+<li>If no ban reason is specified, it will now show &quot;(no reason was given)&quot;</li>
+<li>The floodlimit now doesn't trigger on editing posts</li>
+<li>Posts by non-existant users can now be quoted. (and they will not be quoted like [quote=], but as [quote])</li>
+<li>If the post author of the latest post is deleted/cannot be found, it will now say that properly on the index and topic listing instead of having a blank username.</li>
+<li>It now has some kind of a license</li>
+<li>If you try to post in a thread that does not exist, it now returns the correct error message. Same for posting in a non-existant board and editing a non-existant post.</li>
+<li>Database error messages are partly updated now. You now have to enable debug mode to view the actual SQL error messages when a query fails. And when it's because of an "SQL syntax" error, remind me to make it lock down the forum because it's a very good reason to (currently it just displays &quot;exceptionally flagrant error&quot; in all-caps red bold text).</li>
+<li>Yay, quick moderation system implemented for posts in a thread, you can now select multiple posts on a page and delete them at once</li>
+<li>Referer check now works around www. and non-www. conflicts properly</li>
+<li>If you change your password now, it checks for your current password.</li>
+<li>Support for custom board images added</li>
+<li>CSS class for tables without border. <!-- <del>Doneer nu aan de vereniging ten behoeve van tabellen zonder randen</del> easter egg found --> Even though I ended up not using it.</li>
+<li>Global word filter implemented</li>
+<li>New style that looks much better - thanks for making this possible, Doormat</li>
+</ul>
+
+<h3>v0.8.7 - 23 Mar 2014</h3>
+<ul>
+<li>Two major security problems fixed. Thanks for finding them, FIQ!</li>
+</ul>
+
+<h3>v0.8.6 - 10 Mar 2014</h3>
+<ul>
+<li>Users with characters like &lt; and &gt; among some others can now be banned and ignored correctly</li>
+<li>htmlspecialchars() now used for ban reasons to prevent misinterpretation of text involving &lt; and &gt;</li>
+<li>Messups which happened when an account was added or when the password of an account was changed via the Admin CP fixed</li>
+<li>There's now a button to delete an account from their profile</li>
+<li>When adding an account in the admin CP, the dropdown is now on active by default (I'm thinking of changing the whole status thing because most of it is unnecessary. I'm gonna change the blocked thing to IP addresses instead of individual accounts, and the whole &quot;hidden account&quot; stuff makes little sense and is kind of ineffective</li>
+</ul>
+
+<h3>v0.8.5 - 9 Mar 2014</h3>
+<ul>
+<li>Much better security; the HTTP referer is now checked on every page in the admin CP, mod CP, account CP, and in modtopic.php and post.php to avoid harm done with malicious forms and buttons which are unknowingly used on different sites. (Differently said, it used to be not impossible to link an admin (or anyone who has the power to do something) to a page with for example a button, and when they pressed the button anything could be deleted or they could end up posting something without their consent).</li>
+<li>Fixed a typo in a function, preventing accounts from being made from within the admin CP</li>
+</ul>
+
+<h3>v0.8.4B - 8 Mar 2014</h3>
+<ul>
+<li>There's now an option to mask all IP addresses as '127.0.0.1' when that's enabled. That option could be useful for demo forums.</li>
+<li>Added quick password reset to quick user tools</li>
+<li>Added quick rank change to quick user tools</li>
+</ul>
+
+<h3>v0.8.4A - 7 Mar 2014</h3>
+<ul>
+<li>Small change in admin CP sidebar</li>
+<li>Chosen items in the CP sidebar now use a CSS class</li>
+<li>Implemented a &quot;quick user tools&quot; feature, which currently only has an option for renaming a user quickly. More options will be added later, and more quick tools (such as quick board &amp; topic tools) will be added later as well.</li>
+</ul>
+
+<h3>v0.8.4 - 6 Mar 2014</h3>
+<ul>
+<li>The ban table is more detailed now</li>
+<li>The link to the rules on the main help page now only shows if forum rules are set</li>
+</ul>
+
+<h3>v0.8.3 - 4 Mar 2014</h3>
+<ul>
+<li>Implemented forum rules feature</li>
+<li>FINALLY fixed the list having a lot of blank lines in between, I've had problems with invisible characters before! Damn you, character 0x0D</li>
+<li>[alist] and [Alist] tags added to BBC</li>
+<li>YouTube API connection debug message now changed to $debug instead of $_GET[&quot;debug&quot;]</li>
+</ul>
+
+<h3>v0.8.2A - 3 Mar 2014</h3>
+<ul>
+<li>Real quick fix of a weird if-condition which showed a deletion button to mods even if they can't delete it (and why did I use one = for equals?)</li>
+</ul>
+
+<h3>v0.8.2 - 3 Mar 2014</h3>
+<ul>
+<li>Second attempt to remove the PHP warning when posting, if 0 posts were made with one IP.</li>
+<li>Added a button to save the moderator comment and close/reopen a moderator report in one go</li>
+<li>On the styles page in the admin CP, there's now a note saying how many users are not using the forum's default theme</li>
+<li>Signatures implemented, with or without BBC</li>
+<li>If you make a new post, its header will now be highlighted just like when you edit it</li>
+<li>Added a debug option to use no style</li>
+</ul>
+
+<h3>v0.8.1 - 1 Mar 2014</h3>
+<ul>
+<li>Added a backend page, which will have settings and technical stuff admins normally don't have to worry about</li>
+<li>Debug mode implemented</li>
+<li>DavBB now cannot run with register_globals enabled; as it probably opens very bad security holes</li>
+<li>"Fixed" the bug where an error would be returned when posting if you have 0 posts (&quot;@&quot; does its magic now)</li>
+<li>Fixed bug where the default style would be displayed wrongly if someone set another style (whoops, that was an oversight)</li>
+<li>Small string update</li>
+<li>Error messages now show the normal header</li>
+</ul>
+
+<h3>v0.8 - 24 Feb 2014 - 28 Feb 2014</h3>
+<ul>
+<li>Multiple styles can now be chosen from. Images are now also style-specific and people can choose which style to choose.</li>
+<li>Header problem fixed!</li>
+<li>If you change your password, you won't have to login again (this has already been fixed but it broke one time)</li>
+<li>Glitch that should have occured with passwords with certain characters should be fixed now</li>
+<li>Height of date and buttons bar for posts made normal (seriously, everywhere I look on the internet people only come up with complicated JavaScript and non-working things and setting the height to 1px was the solution?)</li>
+<li>More elements have classes now, such as table headers and more stuff, for customization with CSS</li>
+<li>Moderators and administrators circumvent the flood limit now (they will get a message saying they would have been stopped)</li>
+<li>Name for index header changed to something that makes more sense since the same header appears on all pages since 0.6</li>
+<li>If you hover over ban expiry dates/times, you can now see the remaining time</li>
+<li>Ban expiry dates? How about time zone problems? Made it a countdown.</li>
+<li>The date+time a ban was added is now saved as well. (But not displayed, but it's saved!)</li>
+</ul>
+
+<h3>v0.7.2 - 21 Feb 2014</h3>
+<ul>
+<li>More power for admins! IP banning implemented</li>
+<li>Who banned a user is now also stored in the database. Am I really that lazy to make it display that now? I will later.</li>
+<li>Different layout for the &quot;You have been banned&quot; message</li>
+</ul>
+
+<h3>v0.7.1A - 20 Feb 2014</h3>
+<ul>
+<li>A configuration change in the PHP used for my DavBB installations is holding me back- I'm just implementing a warning in the admin CP to see if this is the case</li>
+<li>If maintenance mode is on, it will now clearly say that in the admin CP</li>
+</ul>
+
+<h3>v0.7.1 - 16 Feb 2014</h3>
+<ul>
+<li>The ban list is now ordered by expiration date and secondarily by username</li>
+<li>You can now ban for a custom amount of hours, days, weeks, months and years instead of just days.</li>
+<li>More CSS customizability, rank colors can now be changed with CSS!</li>
+</ul>
+
+<h3>v0.7 - 12 Feb 2014 - 15 Feb 2014</h3>
+<ul>
+<li>IP checking implemented (it's a page where you can check which members are using a given IP (range)). It even has a whois lookup link!</li>
+<li>Flood limiting implemented</li>
+<li>Anti-spam questions implemented. Answers are case-insensitive and you can provide multiple possible answers for each question. It also has stats to see how many times a question has been answered correctly and how many times incorrectly, and these counters can be reset with a task.</li>
+<li>Some security improvements</li>
+<li>The admin CP and mod CP now have a new sidebar menu that is the same on all pages for quick access</li>
+<li>A &amp;nbsp on the stats page has been changed to the correct &amp;nbsp; (it showed up incorrectly on some browsers)</li>
+<li>Leaving the duration field for a ban blank doesn't result in a 0-day ban anymore, but in a non-expiring by default</li>
+<li>Ban reasons are now italicized</li>
+</ul>
+
+<h3>v0.6.2A - 04 Feb 2014</h3>
+<ul>
+<li>Fixed a minor glitch where the row saying &quot;None&quot; in the latest edited/renamed tables on the stats page would not be wide enough</li>
+</ul>
+
+<h3>v0.6.2 - 02 Feb 2014 - 03 Feb 2014</h3>
+<ul>
+<li>Posts by ignored users are now more compact, by hiding the avatar and personal text (buttons are hidden as well). Also, their opacity is lower!</li>
+<li>A start of a statistics page in the admin CP, with most ignored users, most filtered words, latest post edits and latest renamed topics.</li>
+<li>Words can now no longer be filtered more than once by the same user</li>
+<li>Topic status icons are now shown on the topic pages themselves</li>
+</ul>
+
+<h3>v0.6.1 - 26 Jan 2014</h3>
+<ul>
+<li>Online and offline icons have glow now</li>
+<li>Redirect boards are now supported</li>
+</ul>
+
+<h3>v0.6 - 23 Jan 2014 - 25 Jan 2014</h3>
+<ul>
+<li>The header has improved much, and is now the same on every page (except in admin CP and mod CP)</li>
+<li>Profile pages look slightly different now</li>
+<li>HTML in board titles cannot break the move topic dialog anymore</li>
+<li>Fixed double HTML special chars magic in topic titles</li>
+<li>DBP supports BACKUP and RESTORE commands now</li>
+<li>The amount of replies and views is now shown on topic pages</li>
+<li>Added a task to remove the online status of all guests or everyone</li>
+<li>Database and URL settings can now be changed in the admin CP instead of having to edit the settings file</li>
+<li>Changed button to buttons in changelog for v0.4A</li>
+</ul>
+
+<h3>v0.5.1 - 21 Jan 2014</h3>
+<ul>
+<li>The version number is now set in logincheck.php, and not in both index.php and admincp.php separately.</li>
+<li>DBP supports a NEW FILE command now</li>
+<li>When a database connection error occurs during a DBP script, it will now tell you what line it occured on (when an error occurs during a query, this will be done later, for I need to change some things in the checkerror() function for it</li>
+<li>DBP supports a REPLACE CONTENTS OF command now</li>
+<li>DBP error messages are a lot better and yield error codes now</li>
+<li>Using Doormat's help icon now</li>
+</ul>
+
+<h3>v0.5A - 19 Jan 2014</h3>
+<ul>
+<li>Passwords don't autofill in the account CP anymore</li>
+<li>DBP supports an OUTPUT command now</li>
+</ul>
+
+<h3>v0.5 - 18 Jan 2014</h3>
+<ul>
+<li>There's now a scripting language to modify code automatically to install plugins or updates.</li>
+</ul>
+
+<h3>v0.4A - 16 Jan 2014</h3>
+<ul>
+<li>The help icon is round now and not an octagon like a stop sign</li>
+<li>The tasks page in the admin CP now provides an explanation for what the button<i>s</i> do</li>
+</ul>
+
+<h3>v0.4 - 15 Jan 2014</h3>
+<ul>
+<li>When a member is deleted, their read topics/posts entries are removed from the database.</li>
+<li>If the forum is in maintenance mode, admins can now see a red ! next to the admin button just like when there are reports open for the mod CP</li>
+<li>Post counts are now no longer stored in the database, so they don't have to be modified when someone posts</li>
+<li>Topics can finally be deleted!!</li>
+<li>New tasks page in admin CP where you can reset all post counts and optimize all database tables (among more to follow in the future, it's just maintenance tasks)</li>
+<li>In a hotfix: fixed a major bug which was never discovered before because nobody has ever used apostrophes in thread titles!</li>
+</ul> 
+
+<h3>v0.3.2C - 12 Jan 2014</h3>
+<ul>
+<li>When there are problems with logging in, it now detects that and shows a message. (this can happen if cookies are blocked or fail to save with the correct URL for example)</li>
+<li>Login problems with subfolders in certain browsers fixed</li>
+<li>In the admin CP, it's now shown if there's an update</li>
+</ul>
+
+<h3>v0.3.2B - 11 Jan 2014</h3>
+<ul>
+<li>Problems when installing the forum in a subfolder have been solved.</li>
+<li>Ordering of guests fixed</li>
+</ul>
+
+<h3>v0.3.2A - 10 Jan 2014</h3>
+<ul>
+<li>Moving topics to categories should no longer be possible.</li>
+<li>Boards are now ordered correctly when moving topics</li>
+<li>You don't get an (empty) topic listing when you try viewing a category anymore.</li>
+</ul>
+
+<h3>v0.3.2 - 10 Jan 2014</h3>
+<ul>
+<li>Boards can now be grouped under categories (they can be added in the boards area of the admin CP)</li>
+<li>You can now also click on text belonging to checkmarks to toggle it</li>
+<li>If you're logged in, you can't login or register</li>
+</ul>
+
+<h3>v0.3.1A - 09 Jan 2014</h3>
+<ul>
+<li>You can now enter a message for maintenance mode</li>
+<li>Enabling maintenance mode now locks the register script as well (ooh)</li>
+<li>Sanitizing input in the admin CP now works the right way! Geez. Apostrophes are now also working again! (Apparently I broke it while fixing backslashes in v0.2.3)</li>
+</ul>
+
+<h3>v0.3.1 - 09 Jan 2014</h3>
+<ul>
+<li>Boards with no posts no longer show up as being last posted in on 12/31/69 or 01/01/70 by a blank poster, but as &ndash;&ndash;.</li>
+<li>Smileys can be placed on multiple rows now</li>
+<li>Variable fail when editing a smiley in the admin CP fixed</li>
+<li>Most error messages will now have the file name and line number hidden in an HTML comment, for debugging purposes when necessary.</li>
+<li>The smileys area of the admin CP now shows unused smiley files</li>
+</ul>
+
+<h3>v0.3 - 07 Jan 2014 / 08 Jan 2014</h3>
+<ul>
+<li>Made view counters work! (not many people even pay attention to them)</li>
+<li>Added [box=Title]Content[/box] to convert to fieldset</li>
+<li>If you log out, you will no longer be listed as online.</li>
+<li>Guests are now listed as online</li>
+<li>Better security: (un)locking and (un)stickying uses $_POST now instead of $_GET, in other words: does not rely on the URL anymore, fixing an exploit where mods and admins could be lured into clicking a direct link to (un)locking/(un)stickying a topic, or worse, into viewing a topic containing an "image" actually being said direct link. This also applies to unbanning an account.</li>
+<li>Permabanned members no longer show up as banned until 2106 but just as &quot;permanently&quot;</li>
+<li>The software now knows where you were when reading unread posts in a thread!</li>
+<li>After deleting a post, the last post info of the thread and board it's in is corrected</li>
+<li>When permalinking to a post (or reading the first unread post) that post's date header thing is highlighted!</li>
+<li>Updated actions again</li>
+<li>Topics can now be moved</li>
+<li>You can now see which topic/profile/board someone is viewing (only as a link for now though). For posting, this is not supported yet though, as it needs to differentiate whether you're posting in a certain board or in a certain topic, and now that I think of it, it needs to know when you're editing a post as well...</li>
+<li>If an action is unknown (like, I didn't add it to the list of actions for currently online users yet like I sometimes forget) it uses the name of the script as a fallback</li>
+<li>Two tabs for smileys now! (In the future, more tabs can be made and they you will be able to name them and stuff)</li>
+<li>Wrong link in admincp_modsmiley.php fixed</li>
+<li>Pressing enter to add a filtered word or an ignored user will no longer remove the first one</li>
+<li>Filtered words now have to be at least two characters long, because filters for 1 letter may simply mess it up.</li>
+</ul>
+
+<h3>v0.2.3 - 05 Jan 2014</h3>
+<ul>
+<li>Mostly an important security update, HTML injection in topic titles, usernames, (profile info if editing as admin), memberlist search and moderator comment for reports fixed! That was pretty bad, I thought the problem couldn't occur because I protected against it but it didn't work...</li>
+<li>Apostrophes in usernames are working now (we never noticed?)</li>
+<li>Censoring of words in topic titles is now working when renaming or moving a topic.</li>
+<li>Using a backslash in the admin CP will no longer break the settings file.</li>
+<li>Variable fail when editing a board and when viewing the profile of a banned member in the admin CP fixed</li>
+<li>Banned members show up as such in the memberlist, and no longer show up as online when they try to get in</li>
+</ul>
+
+<h3>v0.2.2 - 04 Jan 2014</h3>
+<ul>
+<li>Apparently I forgot to include the new help pages in some earlier version, that's updated now.</li>
+<li>People can filter words now! Currently it only works for post bodies and topic titles though.</li>
+<li>Users can now make an ignore list. Posts by ignored people won't be visible unless you open them specifically, and in the future, PM threads with ignored users won't be visible.</li>
+<li>The censor tag in the BBC help uses CSS as well now</li>
+</ul>
+
+<h3>v0.2.1 - 02 Jan 2014</h3>
+<ul>
+<li>A link to this changelog is now shown in the admin CP</li>
+<li>After posting, you get anchored to the new post.</li>
+<li>Bad HTML for IP fallback in posts fixed</li>
+<li>Smileys don't have to be typed in HTML anymore when adding them in the admin CP (like having to type &amp;gt; if you want &gt;</li>
+<li>The smileys and languages folders no longer have directory listing</li>
+<li>You can now go to the help page from the index</li>
+<li>(Somewhat vague I'm sorry) description of the [.] tag in the help</li>
+<li>You can now also swap the width and height attributes in BBCode for image</li>
+<li>Double colon on modboard page fixed</li>
+</ul>
+
+<h3>v0.2 - 01 Jan 2014</h3>
+<ul>
+<li>Local time is now shown in profiles.</li>
+<li>IPs can now be shown per post for admins (click the IP link and it will appear)</li>
+<li>The youtube tag also accepts 'http://www.youtube.com/watch?v=' and 'http://youtu.be/' URLs now.</li>
+<li>Actions updated</li>
+<li>YouTube video links give descriptions now on hover</li>
+<li>After editing and canceling deletion of a post, it redirects back to the post instead of to the beginning of the topic.</li>
+<li>Apostrophe in crying smiley fixed. But why did &quot;D convert to &amp;quot<img src="http://davbb.site11.com/demo/smileys/grin.gif" alt="Grin"> because ;D and now it doesn't</li>
+<li>Fixed a bug where edited posts would not have the 2 minutes without last edit sign</li>
+<li>Separate table for users currently online</li>
+<li>The style of censors can now be changed with CSS</li>
+<li>Boards are now correctly ordered by their order number in the admin CP</li>
+<li>If you're previewing when editing a post, it no longer reverts back</li>
+<li>Smileys are now database-driven, so smileys can easily be customized!</li>
+<li>Some improvements to the layout of the post page (the post box used to be wider than necessary and would move the smileys to the left of the post box if you resized the box)</li>
+<li>The phpinfo page no longer includes the custom CSS, because it may produce illegible text (because of backgrounds) and stuff, interfering stylesheets</li>
+</ul>
+
+<h3>v0.1.4 - 30 Dec 2013</h3>
+<ul>
+<li>The board index shows an icon for locked boards now in the legend/key</li>
+<li>Added the rest of the sentence I forgot in this changelog, in italics.</li>
+<li>A now *missing* bullet when an admin is viewing their own profile has been fixed, now everything regarding bullets in profile views should be working correctly</li>
+<li>The moderator username is shown in the list of moderator reports (instead of the ID)</li>
+<li>The corner pixels on the font button for BBC are now transparent like they should be</li>
+<li>The first post in a topic can no longer be deleted, because it can cause a pagination glitch and confusion.</li>
+</ul>
+
+<h3>v0.1.3 - 30 Dec 2013</h3>
+<ul>
+<li>Admins can now edit more member details, like settings, and can also change post counts and freeze them. Frozen post counts <i>will appear in gray</i></li>
+<li>Admins can recount people's posts</li>
+<li>Some unknown bug where the amount of replies in a topic somehow includes the first post as well should now be corrected when posting</li>
+<li>An unnecessary bullet was displayed when an admin was viewing another admin's profile.</li>
+<li>Posts can now be permalinked to</li>
+<li>The report list and report view page now link to posts, and the report list gives the name of the reporter (the report view page already did)</li>
+<li>Finally, both OP username and last poster username in board display works</li>
+<li>When mods/admins edit someone else's post, they won't have 2 minutes free editing time</li>
+<li>Topics can be renamed now.</li>
+</ul> 
+
+<h3>v0.1.2 - 29 Dec 2013</h3>
+<ul>
+<li>Locked boards and reply-only boards are now working properly</li>
+<li>Posts in topics are now wider, along with the author block which reduces the chance of it stretching out when someone has a long username.</li>
+</ul>
+
+<h3>v0.1.1 - 28 Dec 2013</h3>
+<ul>
+<li>Links to phpinfo (server configuration info) and bans are now included in the admin CP</li>
+<li>Posts by deleted users now show up correctly. This also applies to topics started by deleted users.</li>
+<li>The topic page counter is now also displayed at the top of the page.</li>
+<li>Page counters for topics are now also displayed in the topic list.</li>
+<li>A bug with page counters in board views is now fixed</li>
+<li>A register link is now displayed on the login page, and a login link on the register page</li>
+<li>There's now an edit link for admins in profile pages</li>
+<li>Input validation in admin CP so apostrophes can now be used without destroying the settings.php file.</li>
+<li>Hard deleting of posts is now implemented.</li>
+<li>The not necessary anymore JavaScript popups for deleting a board or an account are removed, so it's not 4 popups anymore</li>
+<li>The last poster ID is now clickable for the profile (I still haven't figured out how to make that show a username while the topic starter *also* has a username)</li>
+<li>Moderation reports can now be viewed individually, commented on, closed and reopened, and deleted.</li>
+<li>Version is now displayed on index as well (first it was only in Admin CP)</li>
+<li>Language updates</li>
+</ul>
+</body>
+</html>

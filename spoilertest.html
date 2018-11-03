@@ -1,0 +1,42 @@
+<script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+	   var f = document.getElementById(id + "b");
+       if(e.style.display == 'block') {
+          e.style.display = 'none';
+		  f.innerHTML = 'Show Spoiler';
+		  }
+       else {
+          e.style.display = 'block';
+		  f.innerHTML = 'Hide Spoiler';
+		  }
+    }
+-->
+</script>
+
+<style>
+  body
+  {
+	font-family:sans-serif;
+  }
+  div.trans
+  {
+    border:1px solid;
+    display:none;padding:10px;
+	width:200px;font-size:12px;
+	background:#ff9;
+  }
+  button.toggle
+  {
+	background:#ddd;box-shadow:1px 1px #777;
+	color:#000;padding:3px;border:0;
+  }
+  button.toggle:active
+  {
+	position:relative;top:1px;left:1px;box-shadow:-1px -1px #777;
+  }
+</style>
+
+<button class="toggle" onclick="toggle_visibility('tr00');" id="tr00b">Show Spoiler</button>
+<div class="trans" id="tr00">Darth Vader is Luke's father</div>

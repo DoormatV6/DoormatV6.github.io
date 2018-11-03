@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px">
+<g>
+<ellipse cx="8.02px" cy="8.02px" rx="7.3px" ry="7.3px" fill="#fffb00" stroke="#000000" stroke-width="0.64" stroke-opacity="1" />
+<ellipse cx="5.36px" cy="5.56px" rx="0.08px" ry="1.12px" fill="#000000" stroke="#000000" stroke-width="0.64" stroke-opacity="1" />
+<ellipse cx="10.44px" cy="5.52px" rx="0.08px" ry="1.12px" fill="#000000" stroke="#000000" stroke-width="0.64" stroke-opacity="1" />
+<path fill="none" stroke-width="0.64" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M 3.0106 8.86218 C 3.36452 9.95513 3.71844 11.0481 4.57002 11.69 C 5.4216 12.3319 6.77083 12.5228 8.11002 12.51 C 9.44921 12.4972 10.7783 12.2806 11.61 11.65 C 12.4417 11.0194 12.7758 9.9747 13.11 8.93002" />
+</g>
+</svg>

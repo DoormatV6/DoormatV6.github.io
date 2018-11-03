@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wonderful World of Wii U</title>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<style>
+body {
+	margin:0;
+	background-color:#000;
+	}
+div.bdy {
+	background-color:#77AFC7;
+	background-image:url(img/bg1.png);
+	background-repeat:repeat-x;
+	height:448px;
+	width:854px;
+	-webkit-animation:scroll2 6s linear infinite;
+	animation:scroll2 6s linear infinite;
+	}
+div.ground {
+	position:absolute;top:401px;background-image:url(img/bg2.png);height:47px;width:854px;
+	-webkit-animation:scroll .5s linear infinite;
+	animation:scroll .5s linear infinite;
+	}
+
+@-webkit-keyframes scroll {
+from {background-position: 0px 0px;}
+to   {background-position:-64px 0px;}
+}
+@keyframes scroll {
+from {background-position: 0px 0px;}
+to   {background-position:-64px 0px;}
+}
+@-webkit-keyframes scroll2{
+from {background-position: 0px 0px;}
+to   {background-position:-510px 0px;}
+}
+@keyframes scroll2{
+from {background-position: 0px 0px;}
+to   {background-position:-510px 0px;}
+}
+
+img.mario {position:absolute;top:  338px;left:411px;}
+img.ulogo {position:absolute;top:   85px;left:143px;-webkit-animation:ulogo 5s ease infinite;animation:ulogo 5s ease infinite;}
+@-webkit-keyframes ulogo{
+from {top:85px;}
+50%  {top:100px;}
+to   {top:85px;}
+}
+@keyframes ulogo{
+from {top:85px;}
+50%  {top:100px;}
+to   {top:85px;}
+}
+</style>
+</head>
+<body>
+<div class="bdy">
+<img src="img/wiiu.png" class="ulogo" alt="Wii U">
+<img src="img/marioani.gif" class="mario" alt="Mario">
+<div class="ground"></div></div>
+</body>
+</html>

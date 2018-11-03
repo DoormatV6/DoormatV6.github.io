@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>comments</title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" 			 type="text/css" title="black"  href="style_black.css">
+	<link rel="alternate stylesheet" type="text/css" title="white"  href="style_white.css">
+	<link rel="alternate stylesheet" type="text/css" title="red"    href="style_red.css">
+	<link rel="alternate stylesheet" type="text/css" title="green"  href="style_green.css">
+	<link rel="alternate stylesheet" type="text/css" title="blue"   href="style_blue.css">
+	<link rel="alternate stylesheet" type="text/css" title="orange" href="style_orange.css">
+	<link rel="alternate stylesheet" type="text/css" title="pink"   href="style_pink.css">
+	<script src="styleswitch.js"></script>
+</head>
+
+<body id="body" onload="set_style_from_cookie()">
+
+<div id="colours">
+	<div class="colourselector" id="cs-black"  onclick="switch_style('black');return false;" ></div>
+	<div class="colourselector" id="cs-white"  onclick="switch_style('white');return false;" ></div>
+	<div class="colourselector" id="cs-red"    onclick="switch_style('red');return false;"   ></div>
+	<div class="colourselector" id="cs-green"  onclick="switch_style('green');return false;" ></div>
+	<div class="colourselector" id="cs-blue"   onclick="switch_style('blue');return false;"  ></div>
+	<div class="colourselector" id="cs-orange" onclick="switch_style('orange');return false;"></div>
+	<div class="colourselector" id="cs-pink"   onclick="switch_style('pink');return false;"  ></div><br>
+</div>
+
+<div id="comments">
+	<div class="commentbox">So, what is your opinion on the matter, UserTwo?
+		<div class="posterinfo">
+			<b>UserOne</b>, 10/10/10, 2:56 PM
+		</div>
+	</div>
+	<div class="arrow-down"></div>
+	<!--endcomment-->
+	<div class="commentbox"><p>I think
+lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas dictum nisl, vitae cursus neque posuere id. Curabitur malesuada ultrices tellus, et feugiat urna rutrum mattis. Nam nec mi neque. Curabitur cursus lectus non dui faucibus, nec dignissim lacus lacinia. Pellentesque mattis velit quis sagittis scelerisque. Suspendisse a odio ut augue aliquet tempus. Aenean tortor justo, tempus a egestas vel, consectetur et arcu. Quisque id iaculis metus.
+</p>
+
+<p>
+Donec at mi ut nunc pharetra iaculis laoreet vel turpis. Sed neque metus, accumsan eu tincidunt in, ultrices non quam. Cras vitae dui et lectus placerat vulputate. Ut eget vulputate dolor. Sed mattis gravida bibendum. Curabitur sapien nisi, gravida pellentesque porttitor vitae, pharetra at nulla. Morbi vitae consequat mauris. Curabitur diam augue, adipiscing id mi eget, elementum ornare ligula. Praesent sit amet velit nulla.
+</p>
+
+<p>
+Curabitur dignissim aliquet elementum. Nulla facilisi. Vestibulum elementum nibh felis, vitae dapibus tortor adipiscing vitae. Nam tempor erat molestie, pharetra lacus non, tincidunt dolor. Vestibulum ultricies eros nunc, sit amet bibendum ante adipiscing id. Donec viverra ullamcorper justo, aliquam eleifend massa vehicula non. Phasellus pulvinar convallis ante at interdum.
+</p>
+		<div class="posterinfo">
+			<b>UserTwo</b>, 10/10/10, 3:05 PM
+		</div>
+	</div>
+	<div class="arrow-down"></div>
+	<!--endcomment-->
+	<div class="commentbox">...what
+		<div class="posterinfo">
+			<b>UserOne</b>, 10/10/10, 3:10 PM
+		</div>
+	</div>
+	<div class="arrow-down"></div>
+	<!--endcomment-->
+	<div class="commentbox">Girl
+		<div class="posterinfo">
+			Guest, 10/10/10, 3:30 PM
+		</div>
+	</div>
+	<div class="arrow-down"></div>
+	<!--endcomment-->
+	<div class="commentbox">Friend
+		<div class="posterinfo">
+			Guest, 10/10/10, 3:31 PM
+		</div>
+	</div>
+	<div class="arrow-down"></div>
+	<!--endcomment-->
+	<div class="commentbox">Get the hell out of here. Now.
+		<div class="posterinfo">
+			<b>UserOne</b>, 10/10/10, 3:33 PM
+		</div>
+	</div>
+	<div class="arrow-down"></div>
+	<!--endcomment-->
+	<div class="commentbox">I can set my name while I'm a guest, but it will still say I'm a guest. PLS FIX
+		<div class="posterinfo">
+			Some Man (Guest), 10/10/10, 3:37 PM
+		</div>
+	</div>
+	<div class="arrow-down"></div>
+	<!--endcomment-->
+	<div class="commentbox">no
+		<div class="posterinfo">
+			<b>UserOne</b>, 10/10/10, 3:39 PM
+		</div>
+	</div>
+	<div class="arrow-down"></div>
+	<!--endcomment-->
+	<fieldset id="commentfield">
+	<legend class="outsidetext">Enter your comment:</legend>
+		<textarea id="commentarea"></textarea><br>
+		<button id="commentsubmit">Submit!</button>
+	</fieldset>
+</div>
+</body>
+</html>

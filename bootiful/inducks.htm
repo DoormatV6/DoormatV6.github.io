@@ -1,0 +1,35 @@
+<style>
+#home {
+background: url(home-bg.jpg) 50% 0 repeat fixed; min-height: 1000px;
+}
+ 
+#about {
+background: url(about-bg.jpg) 50% 0 no-repeat min-height: 1000px; 
+}
+</style>
+
+<section id="home" data-type="background" data-speed="50" class="pages">    
+         <article>I am absolute positioned</article>
+    </section>  
+     
+<section id="about" data-type="background" data-speed="10" class="pages">
+         <article>Simple Parallax Scroll</article>
+</section>
+
+<script>
+$(document).ready(function(){
+    $('section[data-type="background"]').each(function(){
+        var $bgobj = $(this); // assigning the object
+     
+        $(window).scroll(function() {
+            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+             
+            // Put together our final background position
+            var coords = '50% '+ yPos + 'px';
+ 
+            // Move the background
+            $bgobj.css({ backgroundPosition: coords });
+        });
+    });   
+});
+</script>

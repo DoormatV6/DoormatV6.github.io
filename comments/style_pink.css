@@ -1,0 +1,24 @@
+@import url("main_styles.css");
+
+body {
+	background:#960077;
+	color:#fff;
+	text-shadow:1px 1px #000;
+}
+div.commentbox {
+	background:#f012be;
+}
+.arrow-down {
+	border-top: 10px solid #f012be;
+}
+
+div#cs-pink {top:-2px;cursor:default}
+
+fieldset#commentfield {
+	border:1px solid #fff;
+}
+
+textarea#commentarea, button#commentsubmit {
+	background:#f012be;
+	color:#fff;
+}

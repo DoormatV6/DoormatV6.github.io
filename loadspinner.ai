@@ -1,0 +1,153 @@
+%!PS-Adobe-3.0 
+%%Creator: Adobe Illustrator(r) 6.0
+%%For: (Macromedia Flash) ()
+%%Title: (C:\Users\Administrator\Dropbox\Public\test\loadspinner.ai)
+%%CreationDate: (08/10/14) (12:01:53)
+%%BoundingBox: 0 0 50 50
+%%HiResBoundingBox: 0.0 0.0 50.0 50.0
+%%DocumentProcessColors: Cyan Magenta Yellow Black
+%%DocumentNeededResources: procset Adobe_level2_AI5 1.0 0
+%%+ procset Adobe_screens_AI5 1.0 0
+%%+ procset Adobe_typography_AI5 1.0 0
+%%+ procset Adobe_blend_AI5 1.0 0
+%%+ procset Adobe_Illustrator_AI6_vars Adobe_Illustrator_AI6
+%%+ procset Adobe_Illustrator_AI5 1.0 0
+%AI5_FileFormat 2.0
+%AI3_ColorUsage: Color
+%AI3_TemplateBox: 306 396 306 396
+%AI3_TileBox: 18 18 32 32
+%AI3_DocumentPreview: None
+%%EndComments
+%%BeginProlog
+%%IncludeResource: procset Adobe_level2_AI5 1.0 0
+%%IncludeResource: procset Adobe_screens_AI5 1.0 0
+%%IncludeResource: procset Adobe_typography_AI5 1.0 0
+%%IncludeResource: procset Adobe_blend_AI5 1.0 0
+%%IncludeResource: procset Adobe_Illustrator_AI6_vars Adobe_Illustrator_AI6
+%%IncludeResource: procset Adobe_Illustrator_AI5 1.0 0
+%%EndProlog
+%%BeginSetup
+Adobe_level2_AI5 /initialize get exec
+Adobe_screens_AI5 /initialize get exec
+Adobe_Illustrator_AI5_vars Adobe_Illustrator_AI5 Adobe_typography_AI5 /initialize get exec
+Adobe_Illustrator_AI5_vars Adobe_Illustrator_AI5 Adobe_blend_AI5 /initialize get exec
+Adobe_ColorImage_AI6 /initialize get exec
+Adobe_Illustrator_AI5 /initialize get exec
+0 Bn
+%%EndSetup
+u
+*u
+0.000 g
+20.0 45.0 m
+20.0 43.7 20.5 42.5 21.5 41.5 C
+22.4 40.6 23.6 40.1 25.0 40.0 C
+26.4 40.1 27.6 40.6 28.6 41.5 C
+29.5 42.5 30.0 43.7 30.0 45.0 C
+30.0 46.4 29.5 47.6 28.6 48.6 C
+27.6 49.6 26.4 50.1 25.0 50.0 C
+23.6 50.1 22.4 49.6 21.5 48.6 C
+20.5 47.6 20.0 46.4 20.0 45.0 C
+f
+*U
+*u
+0.000 g
+5.0 30.0 m
+3.6 30.1 2.4 29.6 1.5 28.6 C
+0.5 27.6 0.0 26.4 0.0 25.0 C
+0.0 23.7 0.5 22.5 1.5 21.5 C
+2.4 20.6 3.6 20.1 5.0 20.0 C
+6.4 20.1 7.6 20.6 8.6 21.5 C
+9.5 22.5 10.0 23.7 10.0 25.0 C
+10.0 26.4 9.5 27.6 8.6 28.6 C
+7.6 29.6 6.4 30.1 5.0 30.0 C
+f
+*U
+*u
+0.000 g
+25.0 10.0 m
+23.6 10.1 22.4 9.6 21.5 8.6 C
+20.5 7.6 20.0 6.4 20.0 5.0 C
+20.0 3.7 20.5 2.5 21.5 1.5 C
+22.4 0.6 23.6 0.1 25.0 0.0 C
+26.4 0.1 27.6 0.6 28.6 1.5 C
+29.5 2.5 30.0 3.7 30.0 5.0 C
+30.0 6.4 29.5 7.6 28.6 8.6 C
+27.6 9.6 26.4 10.1 25.0 10.0 C
+f
+*U
+*u
+0.000 g
+45.0 30.0 m
+43.6 30.1 42.4 29.6 41.5 28.6 C
+40.5 27.6 40.0 26.4 40.0 25.0 C
+40.0 23.7 40.5 22.5 41.5 21.5 C
+42.4 20.6 43.6 20.1 45.0 20.0 C
+46.4 20.1 47.6 20.6 48.6 21.5 C
+49.5 22.5 50.0 23.7 50.0 25.0 C
+50.0 26.4 49.5 27.6 48.6 28.6 C
+47.6 29.6 46.4 30.1 45.0 30.0 C
+f
+*U
+*u
+0.000 g
+15.0 40.0 m
+15.0 41.4 14.5 42.6 13.6 43.6 C
+12.6 44.6 11.4 45.1 10.0 45.0 C
+8.6 45.1 7.4 44.6 6.5 43.6 C
+5.5 42.6 5.0 41.4 5.0 40.0 C
+5.0 38.7 5.5 37.5 6.5 36.5 C
+7.4 35.6 8.6 35.1 10.0 35.0 C
+11.4 35.1 12.6 35.6 13.6 36.5 C
+14.5 37.5 15.0 38.7 15.0 40.0 C
+f
+*U
+*u
+0.000 g
+44.1 36.5 m
+45.0 37.5 45.5 38.7 45.5 40.0 C
+45.5 41.4 45.0 42.6 44.1 43.6 C
+43.1 44.6 41.9 45.1 40.5 45.0 C
+39.1 45.1 37.9 44.6 37.0 43.6 C
+36.0 42.6 35.5 41.4 35.5 40.0 C
+35.5 38.7 36.0 37.5 37.0 36.5 C
+37.9 35.6 39.1 35.1 40.5 35.0 C
+41.9 35.1 43.1 35.6 44.1 36.5 C
+f
+*U
+*u
+0.000 g
+45.0 10.0 m
+45.0 11.4 44.5 12.6 43.6 13.6 C
+42.6 14.6 41.4 15.1 40.0 15.0 C
+38.6 15.1 37.4 14.6 36.5 13.6 C
+35.5 12.6 35.0 11.4 35.0 10.0 C
+35.0 8.7 35.5 7.5 36.5 6.5 C
+37.4 5.6 38.6 5.1 40.0 5.0 C
+41.4 5.1 42.6 5.6 43.6 6.5 C
+44.5 7.5 45.0 8.7 45.0 10.0 C
+f
+*U
+*u
+0.000 g
+10.0 15.0 m
+8.6 15.1 7.4 14.6 6.5 13.6 C
+5.5 12.6 5.0 11.4 5.0 10.0 C
+5.0 8.7 5.5 7.5 6.5 6.5 C
+7.4 5.6 8.6 5.1 10.0 5.0 C
+11.4 5.1 12.6 5.6 13.6 6.5 C
+14.5 7.5 15.0 8.7 15.0 10.0 C
+15.0 11.4 14.5 12.6 13.6 13.6 C
+12.6 14.6 11.4 15.1 10.0 15.0 C
+f
+*U
+U
+%%PageTrailer
+gsave annotatepage grestore showpage
+%%Trailer
+Adobe_Illustrator_AI5 /terminate get exec
+Adobe_ColorImage_AI6 /terminate get exec
+Adobe_blend_AI5 /terminate get exec
+Adobe_typography_AI5 /terminate get exec
+Adobe_screens_AI5 /terminate get exec
+%Adobe_level2_AI5 /terminate get exec
+%%EOF

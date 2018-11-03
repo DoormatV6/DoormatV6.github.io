@@ -1,0 +1,40 @@
+body {
+	background-color:#000;
+	font-family:'Bauhaus 93';
+	margin:0;
+}
+
+.centre {
+	margin:0 auto;
+}
+
+div#indexdiv {
+	border-radius:10px;
+	background-color:#fff;
+	width:550px;height:400px;
+	margin-top:3px;
+	overflow:hidden;
+}
+
+img#homestar {
+	position:relative;
+	left:550px;
+	animation:across 5s linear infinite, updown .5s linear infinite alternate;
+}
+
+@keyframes across {
+	from {
+		left:550px;
+	}
+	to {
+		left:-502px;
+	}
+}
+@keyframes updown {
+	from {
+		transform:translate(0px,0px);
+	}
+	to {
+		transform:translate(0px,-20px);
+	}
+}

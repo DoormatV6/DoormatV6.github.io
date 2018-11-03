@@ -1,0 +1,89 @@
+	@font-face {
+	font-family: 'c64';
+    src: url("file/c64.eot");
+    url("file/c64.ttf") format('opentype');
+	src: url("file/c64.woff") format('woff');
+	}
+	
+	body {
+		background-color:#E03200;
+		background-image:url('file/back.png');
+		animation:bgani 20s linear infinite;
+		-webkit-animation:bgani 20s linear infinite;
+		image-rendering: -moz-crisp-edges;
+		-webkit-font-smoothing:none;
+		font-family:'c64';
+		font-size:20px;
+		line-height:20px;
+		text-shadow:2px 2px 0px rgba(0,0,0,0.75);
+		color:white;
+		}
+	div.box{
+		border-style: solid;
+		border-width: 4px 5px 5px 4px;
+		-moz-border-image: url(file/border.png) 4 5 5 4 repeat;
+		-webkit-border-image: url(file/border.png) 4 5 5 4 repeat;
+		-o-border-image: url(file/border.png) 4 5 5 4 repeat;
+		border-image: url(file/border.png) 4 5 5 4 fill repeat;
+		width:624px;
+		margin:0 auto;
+		padding:8px;
+		min-height:260px;
+		}
+	h1 { 
+		font-size:40px;
+		font-variant: small-caps;
+		}
+	h1,h3 {
+		margin:0px 0px 8px 0px;
+		font-weight:normal;
+		text-align:center;
+		}
+	.sshot {
+		box-shadow: 2px 2px 0px rgba(0,0,0,0.75);
+		height:195px;
+		margin:8px;
+		}
+	.ss1 {float:right;}.ss2 {float:left;}
+	.sshot:hover{transform:translate(-2px,-2px);-webkit-transform:translate(-2px,-2px);}
+	.gamelink {text-align:right;}
+	.rlink {position:relative;}
+	.rlink:hover {top:-2px;left:-2px;}
+	
+	a:link {color:#f00;text-decoration:none;
+	animation:linkani 20s linear infinite;
+	-webkit-animation:linkani 20s linear infinite;
+	}
+	a:visited {color:#f00;}
+	
+	::selection {
+	background: rgba(0,0,0,0.25);
+	}
+	::-moz-selection {
+	background: rgba(0,0,0,0.25);
+	}
+
+	@keyframes bgani{
+	0% {background-position:0px 0px;}
+	25% {background-color:#CEE451;}
+	50% {background-color:#789BC8;}
+	75% {background-color:#B000BB;}
+	100% {background-position:160px 320px;}
+	}
+	@-webkit-keyframes bgani{
+	0% {background-position:0px 0px;}
+	25% {background-color:#CEE451;}
+	50% {background-color:#789BC8;}
+	75% {background-color:#B000BB;}
+	100% {background-position:160px 320px;}
+	}
+	@keyframes linkani{
+	25% {color:#CEE451;}
+	50% {color:#789BC8;}
+	75% {color:#B000BB;}
+	}
+	@-webkit-keyframes linkani{
+	25% {color:#CEE451;}
+	50% {color:#789BC8;}
+	75% {color:#B000BB;}
+	}

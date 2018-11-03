@@ -1,0 +1,134 @@
+/* select parts of html5bp */
+
+* { -webkit-box-sizing: border-box; }
+
+html { font-size: 13px; }
+
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+body, ul, li { margin: 0; padding: 0; line-height: 1.1; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* surii.net apps */
+
+/* primary content div(s) */
+
+body > div
+{
+  margin: 0;
+  padding: 0;
+}
+
+/* screen type classes */
+
+.tiny > div:first-child
+{
+  height: 212px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 320px;
+}
+
+.skinny > div:first-child
+{
+  height: 218px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 320px;
+}
+
+.skinny > div:nth-child(2)
+{
+  height: 212px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 218px;
+  width: 320px;
+}
+
+.skinnyscroll > div
+{
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 320px;
+}
+
+.tbonescroll > div:first-child
+{
+  height: 218px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 398px;
+}
+
+.tbonescroll > div:nth-child(2)
+{
+  left: 39px;
+  position: absolute;
+  top: 218px;
+  width: 320px;
+}
+
+.tbone > div:first-child
+{
+  height: 218px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 398px;
+}
+
+.tbone > div:nth-child(2)
+{
+  height: 212px;
+  left: 39px;
+  overflow: hidden;
+  position: absolute;
+  top: 218px;
+  width: 320px;
+}
+
+/* button templates */
+
+.surii-close
+{
+  -webkit-border-top-left-radius: 24px;
+  -webkit-border-top-right-radius: 24px;
+  margin-left: 4px;
+  width: 98%;
+  height: 24px;
+}
+
+.surii-close.dark
+{
+  background: #888;
+  color: white;
+}
+
+.surii-close .L
+{
+  display: inline-block;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  padding-bottom: 2px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+}
+
+.surii-close.dark .L
+{
+  background: white;
+  color: #888;
+}

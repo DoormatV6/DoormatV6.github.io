@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Windows</title>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<style type="text/css">
+@font-face {
+	font-family:'winfont';
+	src:url('fonts/win.eot') format('embedded-opentype');
+	src:url('fonts/win.woff') format("woff");
+	src:url('fonts/win.ttf') format("truetype");
+}
+
+body {
+	font-family:'winfont';
+	font-size:12pt;
+	color:#000;
+	line-height:16px;
+	}
+	
+.bd1 {
+	border-style: solid;
+	border-width: 4px;
+	-moz-border-image: url(img/border1.png) 4;
+	-webkit-border-image: url(img/border1.png) 4;
+	-o-border-image: url(img/border1.png) 4;
+	border-image: url(img/border1.png) 4 fill;
+	}
+
+#topbar {
+	background:linear-gradient(to right,#000080,#1084D0) repeat scroll 0% 0% transparent;
+	background:-webkit-linear-gradient(left,#000080,#1084D0) repeat scroll 0% 0% transparent;
+	color:#fff;
+	font-weight:bold;
+	letter-spacing:.5px;
+	height:17px;
+	padding:1px 2px 0px 2px;
+	margin:-1px;
+	}
+.fr {
+background-image:url(img/close.png);width:16px;height:14px;
+float:right;
+position:relative;top:1px;}
+.fr:hover {background-image:url(img/close2.png);width:18px;height:16px;top:0px;right:-1px;}
+.fr:active {background-image:url(img/close3.png);width:16px;height:14px;top:1px;right:0px;}
+
+#ermntx {
+	padding:19px 10px 9px 10px;
+	}
+	
+	#maintext {position:relative;top:-40px;left:10px;padding-left:34px;}
+	#buttons {text-align:center;float:right;margin-top:-22px;}
+	
+	.btn {
+	min-width:68px;height:25px;display:inline-block;padding:0px 2px 0px 2px;
+	font-family:'winfont';
+	font-size:12pt;
+	color:#000;
+	line-height:16px;
+	}
+	.btn:hover {
+	-moz-border-image: url(img/border2.png) 4;
+	-webkit-border-image: url(img/border2.png) 4;
+	-o-border-image: url(img/border2.png) 4;
+	border-image: url(img/border2.png) 4 fill;
+	}
+	.btn:active {
+	-moz-border-image: url(img/border3.png) 4;
+	-webkit-border-image: url(img/border3.png) 4;
+	-o-border-image: url(img/border3.png) 4;
+	border-image: url(img/border3.png) 4 fill;
+	}
+</style>
+<script>
+function closewin()
+{
+document.getElementById("err").style.visibility="hidden";
+}
+</script>
+</head>
+<body>
+<div class="bd1" id="err" style="width:315px;">
+	<div id="topbar" style="color:#fff;">Holy Crop! <img class="fr" alt="" onclick="closewin()"></div>
+		<div id="ermntx">
+			<img src="img/monitor.png" width="32" height="32" alt="errorimg"><div id="maintext">Pellentesque sollicitudin magna sed cursus semper. Curabitur a fermentum leo. Donec elementum ut mi ut porta. Praesent dictum neque eu sem bibendum, tempor accumsan turpis ullamcorper. Donec sit amet scelerisque metus. Aenean tempus aliquet tincidunt. Suspendisse lacinia lectus leo, quis imperdiet felis rhoncus vitae. Aenean pulvinar lectus in erat iaculis aliquet. Maecenas eget egestas lacus. Nullam ut ligula justo. Nunc interdum fermentum magna, eget congue metus aliquam vel.
+</div>
+			<div id="buttons"><button class="bd1 btn" onclick="closewin()">OK</button> <button class="bd1 btn">OMG SHUT UP!!1!!</button></div>
+		</div>
+	</div>
+</body>
+</html>

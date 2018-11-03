@@ -1,0 +1,96 @@
+body {
+	background-image:url('http://tolp2.tk/files/bg2.png');
+	background-attachment:fixed;
+	margin:0;padding:0;
+	font-family:Droid Sans;
+	color:white;
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.75);
+}
+	
+a:link {color:#fff;text-decoration:underline;}
+
+a:visited {color:#eee;text-decoration:underline;}
+
+a:hover {color:#aaa;text-decoration:underline;}
+
+a:active {color:#888;text-decoration:none;}
+	
+div.pagescount {
+	margin:20px;
+}
+
+div.quoteheader {
+	font-size:12px;
+}
+blockquote.quote {
+	background-color:rgba(0,0,0,0.5);
+	border-top:3px solid rgba(0,0,0,0.75);
+	border-bottom:3px solid rgba(0,0,0,0.75);
+	padding: 1.1em 1.4em;
+	margin: 0.1em 0px 0.3em;
+	overflow: auto;
+	font-size:12px;
+	background-image:url('http://tolp2.tk/forum/Themes/default/images/theme/quote.png');
+	background-repeat:no-repeat;
+}
+	
+div.post {
+/* IE10 Consumer Preview */ 
+background-image: -ms-radial-gradient(center, ellipse farthest-corner, rgba(85, 85, 85, 0.75) 0%, #3D3D3D 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-radial-gradient(center, ellipse farthest-corner, rgba(85, 85, 85, 0.75) 0%, #3D3D3D 100%);
+/* Opera */ 
+background-image: -o-radial-gradient(center, ellipse farthest-corner, rgba(85, 85, 85, 0.75) 0%, #3D3D3D 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(0, rgba(85, 85, 85, 0.75)), color-stop(1, #3D3D3D));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-radial-gradient(center, ellipse farthest-corner, rgba(85, 85, 85, 0.75) 0%, #3D3D3D 100%);
+/* W3C Markup, IE10 Release Preview */
+background-image: radial-gradient(ellipse farthest-corner at center, rgba(85, 85, 85, 0.75) 0%, #3D3D3D 100%);
+padding:10px 20px;
+margin:20px;
+box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+border: 3px solid #333;
+overflow:auto;
+}
+
+div.post div.postwrap div.poster {
+	float:left;
+	width:15em;
+}
+
+div.post div.postwrap div.poster span.poster_name{
+	font-size:1.5em;
+	color:#EDAD00;
+}
+div.post div.postwrap div.poster span.poster_square{
+	color:gold;
+}
+div.post div.postwrap div.poster img.avatar{
+	max-width:100px;max-height:100px;
+}
+
+div.post div.postwrap div.postarea {
+	margin: 0px 0px 0px 16em;
+}
+
+div.post div.postwrap div.postarea div.topinfo {
+	padding-bottom:10px;
+	border-bottom:1px solid rgba(255, 255, 255, 0.3);
+}
+
+div.post div.postwrap div.postarea div.postcontent {
+	padding-top:10px;
+	padding-bottom:10px;
+	border-bottom:1px solid rgba(255, 255, 255, 0.3);
+}
+
+div.post div.postwrap div.postarea div.signature {
+	padding-top:10px;
+	font-size:12px;
+	line-height:12px;
+}
+
+hr {
+	border: 0; height: 0; border-top: 1px solid rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
